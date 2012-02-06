@@ -119,3 +119,5 @@ inoremap <Enter> <Esc>
 
 map <Leader>nn :NERDTree<cr>
 map <Leader>nc :NERDTreeClose<cr>
+
+map <Leader>p :set invpaste<cr>:set paste?<cr>
