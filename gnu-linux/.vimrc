@@ -1,5 +1,5 @@
 fun! MySys()
-    return "windows"
+    return "gnu/linux"
 endfun
 
 set runtimepath=~/vim_local,$VIMRUNTIME
