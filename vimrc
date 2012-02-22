@@ -21,6 +21,7 @@ if MySys() == "windows"
     let &guioptions = substitute(&guioptions, "t", "", "g")
     set guifont=Courier_New:h12:b:cRUSSIAN
 elseif MySys() == "gnu/linux"
+    set guifont=Monospace\ 12
 endif
 
 if has("gui_running")
@@ -106,12 +107,14 @@ set backup
 
 " --- Mouse balloon
 
-function! MyBalloon()
-    return "Hello, world!"
-endfunction
-set bexpr=MyBalloon()
-set ballooneval
-set balloondelay=100
+if has("gui_running")
+    function! MyBalloon()
+        return "Hello, world!"
+    endfunction
+    set bexpr=MyBalloon()
+    set ballooneval
+    set balloondelay=100
+endif
 
 " --- Keybindings
 
