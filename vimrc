@@ -12,6 +12,7 @@ call vundle#begin()
 " List of plugins
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree.git'
+Plugin 'scrooloose/nerdcommenter.git'
  
 " Done initializing Vundle
 call vundle#end()
@@ -119,12 +120,12 @@ set backup
 " --- Mouse balloon
 
 if has("gui_running")
-    function! MyBalloon()
-        return "Hello, world!"
-    endfunction
-    set bexpr=MyBalloon()
-    set ballooneval
-    set balloondelay=100
+    "function! MyBalloon()
+    "    return "Hello, world!"
+    "endfunction
+    "set bexpr=MyBalloon()
+    "set ballooneval
+    "set balloondelay=100
 endif
 
 " --- Keybindings
