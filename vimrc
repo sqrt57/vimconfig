@@ -1,11 +1,22 @@
 set nocompatible
 
-" --- Load and start pathogen
-source ~/vim_local/bundle/pathogen/autoload/pathogen.vim
-call pathogen#infect('~/vim_local/bundle')
+" Initializing Vundle
+filetype off
+if has("unix")
+    set rtp+=~/.vim/bundle/Vundle.vim
+elseif has("win32")
+    set rtp+=~/vimfiles/bundle/Vundle.vim
+endif
+call vundle#begin()
+
+" List of plugins
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree.git'
+ 
+" Done initializing Vundle
+call vundle#end()
 
 " --- General settings
-
 filetype plugin indent on
 syntax on
 set autoread
@@ -16,12 +27,12 @@ set backspace=indent,eol,start
 
 " --- Colors and fonts
 
-if has("win32")
+if has("unix")
+    set guifont=Monospace\ 12
+elseif has("win32")
     " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
     let &guioptions = substitute(&guioptions, "t", "", "g")
     set guifont=Courier_New:h12:b:cRUSSIAN
-elseif has("unix")
-    set guifont=Monospace\ 12
 endif
 
 if has("gui_running")
