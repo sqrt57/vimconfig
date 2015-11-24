@@ -16,11 +16,11 @@ set backspace=indent,eol,start
 
 " --- Colors and fonts
 
-if MySys() == "windows"
+if has("win32")
     " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
     let &guioptions = substitute(&guioptions, "t", "", "g")
     set guifont=Courier_New:h12:b:cRUSSIAN
-elseif MySys() == "gnu/linux"
+elseif has("unix")
     set guifont=Monospace\ 12
 endif
 
