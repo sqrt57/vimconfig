@@ -46,10 +46,6 @@ else
     colorscheme pablo
 endif
 
-if has('mouse')
-  set mouse=a
-endif
-
 " --- Miscellaneous bindings
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
@@ -85,6 +81,8 @@ set hidden
 set novisualbell
 set t_vb=
 
+set mouse=
+
 " --- Files, backup and undo
 
 fun! Ensure_dir(name)
@@ -103,17 +101,6 @@ set backup
     set directory=~/.vim_runtime/directory
     set backupdir=~/.vim_runtime/backupdir
     set undofile
-
-" --- Mouse balloon
-
-if has("gui_running")
-    "function! MyBalloon()
-    "    return "Hello, world!"
-    "endfunction
-    "set bexpr=MyBalloon()
-    "set ballooneval
-    "set balloondelay=100
-endif
 
 " --- Keybindings
 
