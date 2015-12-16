@@ -81,6 +81,10 @@ set hidden
 set novisualbell
 set t_vb=
 
+set textwidth=80
+set colorcolumn=+1
+set columns=86
+
 set mouse=
 
 " --- Files, backup and undo
