@@ -4,16 +4,16 @@ set nocompatible
 filetype off
 if has("unix")
     set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin("~/.vim/bundle/")
 elseif has("win32")
     set rtp+=~/vimfiles/bundle/Vundle.vim
+    call vundle#begin("~/vimfiles/bundle")
 endif
-call vundle#begin()
 
 " List of plugins
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree.git'
 Plugin 'scrooloose/nerdcommenter.git'
- 
+
 " Done initializing Vundle
 call vundle#end()
 
@@ -45,18 +45,6 @@ else
     set background=dark
     colorscheme pablo
 endif
-
-" --- Miscellaneous bindings
-
-" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
-" so that you can undo CTRL-U after inserting a line break.
-inoremap <C-U> <C-G>u<C-U>
-
-augroup vimrcEx
-au!
-autocmd FileType text setlocal textwidth=78
-
-augroup END
 
 " --- Settings
 
@@ -110,7 +98,3 @@ set backup
 
 inoremap <C-L> <Esc>
 
-map <Leader>nn :NERDTree<cr>
-map <Leader>nc :NERDTreeClose<cr>
-
-map <Leader>p :set invpaste<cr>:set paste?<cr>
