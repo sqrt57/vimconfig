@@ -75,6 +75,9 @@ set columns=86
 
 set mouse=
 
+let g:NERDSpaceDelims=1
+let g:NERDTrimTrailingWhitespace=1
+
 " --- Files, backup and undo
 
 fun! Ensure_dir(name)
