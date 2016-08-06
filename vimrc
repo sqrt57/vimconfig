@@ -69,6 +69,7 @@ set hidden
 set novisualbell
 set t_vb=
 
+set lines=25
 set textwidth=80
 set colorcolumn=+1
 set columns=86
